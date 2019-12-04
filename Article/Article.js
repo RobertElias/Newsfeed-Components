@@ -137,7 +137,10 @@ function createArticle(object) {
   artBtn.classList.add('expandButton');
   artBtn.textContent = ('OPEN THIS ARTICLE');
 
-  
+  //Add event listener for toggle
+  artBtn.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+  })
 
   
 }
