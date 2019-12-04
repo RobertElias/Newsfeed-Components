@@ -41,7 +41,7 @@ function createMenu(items){
   const menuList = document.createElement('ul');
   menuClass.appendChild(menuList);
   
-  items.forEach(element => {
+  items.map(element => {
     const menuLi = document.createElement('li');
     menuLi.textContent = element;
     menuList.appendChild(menuLi);
@@ -50,5 +50,11 @@ function createMenu(items){
   return menuClass;  
 }
 
-const final = menuComps(menuItems);
+const final = createMenu(menuItems);
 const domItems = document.querySelector('.menu-button');
+domItems.addEventListener('click', ()=>{
+  final.classList.toggle('menu--open');
+});
+
+const dom = document.querySelector('body');
+dom.appendChild(final);
