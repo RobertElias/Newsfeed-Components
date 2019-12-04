@@ -142,5 +142,16 @@ function createArticle(object) {
     article.classList.toggle('article-open');
   })
 
+  //Append Child
   
+  article.appendChild(artH2);
+  article.appendChild(dateArt);
+  article.appendChild(pOne);
+  article.appendChild(pTwo);
+  article.appendChild(pThree);
+  article.appendChild(artBtn);
+
+  return article;
+    
 }
+
