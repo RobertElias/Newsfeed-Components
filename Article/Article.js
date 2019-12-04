@@ -196,3 +196,5 @@ function createArticle(object) {
   data.map(data => {
   return articles.appendChild(createArticle(data));
   });
+
+  //MVP MET
